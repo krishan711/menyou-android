@@ -40,11 +40,15 @@ public class AccountActivity extends Activity
         FoodItem item = new FoodItem();
         item.title = "Apple";
         item.calCount = 143;
+        item.imageResId = 0;
         trendingItems.add(item);
+
         item = new FoodItem();
         item.title = "Apple";
         item.calCount = 143;
+        item.imageResId = 0;
         trendingItems.add(item);
+
         item = new FoodItem();
         item.title = "Apple";
         item.calCount = 143;
