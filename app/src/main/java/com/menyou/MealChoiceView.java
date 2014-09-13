@@ -8,11 +8,17 @@ import android.view.View;
 import android.widget.FrameLayout;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 import java.util.Random;
 
 public class MealChoiceView extends FrameLayout
 {
+    public interface Provider
+    {
+        public FoodItem getMenuItem();
+    }
+
     @InjectView(R.id.v_overlay)
     View vOverlay;
 
@@ -20,6 +26,7 @@ public class MealChoiceView extends FrameLayout
     FoodItemView vFoodItem;
 
     private FoodItem foodItem;
+    private Provider provider;
 
     public MealChoiceView(Context context)
     {
@@ -39,13 +46,19 @@ public class MealChoiceView extends FrameLayout
         vFoodItem.setBackgroundColor(getColor());
         setSelected(false);
 
-//        setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                setSelected(true);
-//            }
-//        });
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                setSelected(true);
+            }
+        });
+    }
+
+    public void setProvider(Provider provider)
+    {
+        this.provider = provider;
+        setFoodItem(provider.getMenuItem());
     }
 
     public void setSelected(boolean selected)
@@ -74,6 +87,18 @@ public class MealChoiceView extends FrameLayout
     {
         this.foodItem = item;
         vFoodItem.setFoodItem(item);
+    }
+
+    @OnClick(R.id.btn_accept)
+    public void onAcceptClicked()
+    {
+        setSelected(true);
+    }
+
+    @OnClick(R.id.btn_replace)
+    void onReplaceClicked()
+    {
+        setFoodItem(provider.getMenuItem());
     }
 
 }

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+import java.util.ArrayList;
+
 public class ChoicesActivity extends Activity
 {
     @InjectView(R.id.mtcv_breakfast)
@@ -26,6 +28,16 @@ public class ChoicesActivity extends Activity
         vBreakfast.setTitle("Breakfast");
         vLunch.setTitle("Lunch");
         vDinner.setTitle("Dinner");
+
+        ArrayList<FoodItem> breakfasts = new ArrayList<FoodItem>();
+        FoodItem item = new FoodItem();
+        item.title = "Apple";
+        item.calCount = 143;
+        breakfasts.add(item);
+
+        vBreakfast.setFoodItems(breakfasts);
+        vLunch.setFoodItems(breakfasts);
+        vDinner.setFoodItems(breakfasts);
     }
 
 }

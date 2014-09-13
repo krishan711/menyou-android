@@ -11,7 +11,10 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class MealTypeChoiceView extends LinearLayout
+import java.util.List;
+import java.util.Random;
+
+public class MealTypeChoiceView extends LinearLayout implements MealChoiceView.Provider
 {
     @InjectView(R.id.v_meal_1)
     MealChoiceView vMeal1;
@@ -40,6 +43,8 @@ public class MealTypeChoiceView extends LinearLayout
     @InjectView(R.id.btn_select_all)
     Button selectAll;
 
+    public List<FoodItem> foodItems;
+
     public MealTypeChoiceView(Context context)
     {
         this(context, null);
@@ -63,6 +68,18 @@ public class MealTypeChoiceView extends LinearLayout
         txtTitle.setText(title);
     }
 
+    public void setFoodItems(List<FoodItem> foodItems)
+    {
+        this.foodItems = foodItems;
+        vMeal1.setProvider(this);
+        vMeal2.setProvider(this);
+        vMeal3.setProvider(this);
+        vMeal4.setProvider(this);
+        vMeal5.setProvider(this);
+        vMeal6.setProvider(this);
+        vMeal7.setProvider(this);
+    }
+
     @OnClick(R.id.btn_select_all)
     public void onSelectAllClicked()
     {
@@ -74,6 +91,12 @@ public class MealTypeChoiceView extends LinearLayout
         vMeal6.setSelected(true);
         vMeal7.setSelected(true);
         selectAll.setVisibility(View.GONE);
+    }
+
+    @Override
+    public FoodItem getMenuItem()
+    {
+        return foodItems.get(new Random().nextInt(foodItems.size()));
     }
 
 }
