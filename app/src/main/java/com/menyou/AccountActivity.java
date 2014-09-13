@@ -40,7 +40,7 @@ public class AccountActivity extends Activity
         FoodItem item = new FoodItem();
         item.title = "Apple";
         item.calCount = 143;
-        item.imageResId = R.id.b1;
+        item.imageResId = R.drawable.b1;
         trendingItems.add(item);
 
         item = new FoodItem();
