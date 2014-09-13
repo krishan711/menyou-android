@@ -1,0 +1,32 @@
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            tools:context="com.menyou.ChoicesActivity"
+            android:orientation="vertical">
+
+        <com.menyou.MealTypeChoiceView
+                android:id="@+id/mtcv_breakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <com.menyou.MealTypeChoiceView
+                android:id="@+id/mtcv_lunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <com.menyou.MealTypeChoiceView
+                android:id="@+id/mtcv_dinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding"/>
+
+    </LinearLayout>
+
+</ScrollView>

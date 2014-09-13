@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:id="@+id/txt_title"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="#777777"/>
+
+    <ImageButton
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:alpha="0.7"
+            android:background="@drawable/selectable"
+            android:src="@drawable/ic_remove"/>
+</merge>

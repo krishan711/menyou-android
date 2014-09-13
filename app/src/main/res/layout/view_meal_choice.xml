@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <com.menyou.FoodItemView
+                android:id="@+id/v_food_item"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/btn_accept"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/selectable"
+                    android:scaleType="center"
+                    android:src="@drawable/accept"/>
+
+            <ImageView
+                    android:id="@+id/btn_replace"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/selectable"
+                    android:scaleType="center"
+                    android:src="@drawable/replace"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/v_overlay"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#99ffffff">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:layout_margin="8dp"
+                android:src="@drawable/item_selected"/>
+
+    </FrameLayout>
+
+</merge>

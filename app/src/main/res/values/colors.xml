@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="social_facebook">#3b5998</color>
+    <color name="social_facebook_pressed">#ff2c3e6d</color>
+    <color name="social_twitter">#00aced</color>
+    <color name="social_twitter_pressed">#ff008cc0</color>
+    <color name="social_google">#dd4b39</color>
+    <color name="social_google_pressed">#ffa83b2b</color>
+    <color name="button_shadow">#22555555</color>
+
+    <color name="brand_1">#ff73985e</color>
+    <color name="brand_2">#ff629894</color>
+    <color name="brand_2_pressed">#ff385c58</color>
+    <color name="brand_3">#ff987598</color>
+    <color name="brand_4">#ff988d50</color>
+</resources>

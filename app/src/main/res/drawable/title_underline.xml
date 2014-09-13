@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/brand_2"/>
+    <size
+        android:height="1.5dp"
+        android:width="10000dp"/>
+    <!-- A size has to be specified or else it cannot be drawn -->
+</shape>
